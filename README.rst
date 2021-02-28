@@ -3,6 +3,8 @@ Test PyMathics module
 This is a Python module for Mathics that is an simple "Hello, World" example
 that is typically used as a minimal example for demonstration.
 
+You can also use this as a template to clone if you want to create your own Pymathics module.
+
 Here we are demonstrating how to write a PyMathics module.
 
 To install in development mode (run code from the source tree):
