@@ -17,9 +17,11 @@ is_PyPy = platform.python_implementation() == "PyPy"
 
 setup(
     name="pymathics-hello",
+    maintainer="Mathics Group",
+    maintainer_email="mathic-devel@googlegroups.com",
     version=__version__,
     packages=find_namespace_packages(include=["pymathics.*"]),
-    install_requires=["Mathics3>=1.1.0"],
+    install_requires=["Mathics3>=2.2.0"],
     # don't pack Mathics in egg because of media files, etc.
     zip_safe=False,
     # metadata for upload to PyPI

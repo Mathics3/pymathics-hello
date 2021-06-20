@@ -17,9 +17,7 @@ To install in development mode (run code from the source tree):
 After installing inside Mathics you can load this using the
 ``LoadModule[]`` function.
 
-Then to the function ``Pymathics\`Hello[]`` and the variable ``PyMathics\`$HelloUser`` will be available.
-
-::
+Then the function ```Hello[]`` is available::
 
       $ mathicsscript
       In[1]:= LoadModule["pymathics.hello"]
@@ -28,5 +26,10 @@ Then to the function ``Pymathics\`Hello[]`` and the variable ``PyMathics\`$Hello
       In[2]:= Hello["World"]
       Out[2]:= Hello, World!
 
-      In[3]:= PyMathics`$HelloUser
-      Out[3]:= $your-login-name$
+You can test with ``py.test``::
+
+     $ py.test test
+
+or simply::
+
+     $ make check
