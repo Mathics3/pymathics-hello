@@ -3,7 +3,6 @@
 
 import sys
 import platform
-import os
 from setuptools import setup, find_namespace_packages
 
 # Ensure user has the correct Python version
@@ -20,7 +19,7 @@ setup(
     name="pymathics-hello",
     version=__version__,
     packages=find_namespace_packages(include=["pymathics.*"]),
-    install_requires=["mathics3>=1.1.0"],
+    install_requires=["Mathics3>=1.1.0"],
     # don't pack Mathics in egg because of media files, etc.
     zip_safe=False,
     # metadata for upload to PyPI

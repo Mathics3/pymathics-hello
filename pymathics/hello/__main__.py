@@ -7,10 +7,16 @@ class Hello(Builtin):
       <dt>'Hello'[$person$]
       <dd>An example function in a Python-importable Mathics module.
     </dl>
-    >> PyMathics`Hello["World"]
+    >> Hello["World"]
      = Hello, World!
     """
 
-    def apply(self, person, evaluation):
-        "PyMathics`Hello[person_]"
+    # The function below should start with "apply"
+    def apply_with_name(self, person, evaluation):
+        "%(name)s[person_String]"
+        # %(name)s is just a more flexible way of writing "Hello".
+        # If the class name changes, so will the above pattern.
+        # The above pattern matches Hello with a single string argument.
+        # See https://reference.wolfram.com/language/tutorial/Patterns.html#7301
+        # and https://reference.wolfram.com/language/ref/Cases.html
         return String("Hello, %s!" % person.get_string_value())

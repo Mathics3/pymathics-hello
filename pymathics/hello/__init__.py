@@ -19,7 +19,7 @@ If you don't get an error, you should then be able to run:
 
    ::
 
-   In[2]:= PyMathics`Hello["World"]
+   In[2]:= Hello["World"]
    Out[2]:= Hello, World!
 
    In[3]:= PyMathics`$HelloUser
@@ -27,7 +27,6 @@ If you don't get an error, you should then be able to run:
 
 """
 
-import os
 from pymathics.hello.version import __version__
 from pymathics.hello.__main__ import Hello # noqa
 

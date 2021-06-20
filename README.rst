@@ -25,7 +25,7 @@ Then to the function ``Pymathics\`Hello[]`` and the variable ``PyMathics\`$Hello
       In[1]:= LoadModule["pymathics.hello"]
       Out[1]= pymathics.hello
 
-      In[2]:= PyMathics`Hello["World"]
+      In[2]:= Hello["World"]
       Out[2]:= Hello, World!
 
       In[3]:= PyMathics`$HelloUser
