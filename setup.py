@@ -18,7 +18,7 @@ is_PyPy = platform.python_implementation() == "PyPy"
 setup(
     name="pymathics-hello",
     maintainer="Mathics Group",
-    maintainer_email="mathic-devel@googlegroups.com",
+    maintainer_email="mathics-devel@googlegroups.com",
     version=__version__,
     packages=find_namespace_packages(include=["pymathics.*"]),
     install_requires=["Mathics3>=2.2.0"],
