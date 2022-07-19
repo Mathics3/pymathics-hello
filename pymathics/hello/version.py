@@ -4,4 +4,5 @@
 # This file is suitable for sourcing inside POSIX shell as
 # well as importing into Python. That's why there is no
 # space around "=" below.
-__version__="1.0.1"  # noqa
+# fmt: off
+__version__="5.0.0dev1"  # noqa

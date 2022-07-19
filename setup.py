@@ -19,9 +19,9 @@ setup(
     name="pymathics-hello",
     maintainer="Mathics Group",
     maintainer_email="mathics-devel@googlegroups.com",
-    version=__version__,
+    version=__version__,  # noqa
     packages=find_namespace_packages(include=["pymathics.*"]),
-    install_requires=["Mathics3>=2.2.0"],
+    install_requires=["Mathics3>=5.0.0.dev0"],
     # don't pack Mathics in egg because of media files, etc.
     zip_safe=False,
     # metadata for upload to PyPI
