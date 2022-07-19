@@ -1,5 +1,8 @@
 *~
 /.python-version
+/ChangeLog
+/build
+/dist
 /pymathics_hello.egg-info
 /pymathics_test.egg-info
 __pycache__

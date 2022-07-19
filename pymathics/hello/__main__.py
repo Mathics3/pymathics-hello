@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from mathics.builtin.base import Builtin, String
 
+
 class Hello(Builtin):
     """
     <dl>
@@ -19,4 +20,4 @@ class Hello(Builtin):
         # The above pattern matches Hello with a single string argument.
         # See https://reference.wolfram.com/language/tutorial/Patterns.html#7301
         # and https://reference.wolfram.com/language/ref/Cases.html
-        return String("Hello, %s!" % person.get_string_value())
+        return String(f"Hello, {person.value}!")
