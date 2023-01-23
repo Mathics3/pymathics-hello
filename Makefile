@@ -49,7 +49,7 @@ clean-pyc:
 
 #: Run py.test tests. Use environment variable "o" for pytest options
 pytest:
-	py.test test $o
+	$(PYTHON) -m pytest test $o
 
 
 # #: Make Mathics PDF manual

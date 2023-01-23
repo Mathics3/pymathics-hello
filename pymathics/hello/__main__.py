@@ -13,7 +13,7 @@ class Hello(Builtin):
     """
 
     # The function below should start with "apply"
-    def apply_with_name(self, person, evaluation):
+    def eval(self, person, evaluation):
         "%(name)s[person_String]"
         # %(name)s is just a more flexible way of writing "Hello".
         # If the class name changes, so will the above pattern.
