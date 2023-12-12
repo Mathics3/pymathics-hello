@@ -1,11 +1,6 @@
-
-
-from mathics.core.load_builtin import import_and_load_builtins
 from mathics.session import MathicsSession
 
-import_and_load_builtins()
-
-session = MathicsSession(character_encoding="ASCII")
+session = MathicsSession(add_builtin=True, catch_interrupt=False)
 
 
 def check_evaluation(str_expr: str, expected: str, message=""):
