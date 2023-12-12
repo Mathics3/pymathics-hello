@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from mathics.core.atoms import String
-from mathics.core.builtin import Builtin
+from mathics.builtin.base import Builtin, String
 
 
 class Hello(Builtin):
@@ -14,7 +13,7 @@ class Hello(Builtin):
     """
 
     # The function below should start with "apply"
-    def eval_with_name(self, person, evaluation):
+    def apply_with_name(self, person, evaluation):
         "%(name)s[person_String]"
         # %(name)s is just a more flexible way of writing "Hello".
         # If the class name changes, so will the above pattern.
