@@ -9,6 +9,7 @@ class Hello(Builtin):
       <dt>'Hello'[$person$]
       <dd>An example function in a Python-importable Mathics module.
     </dl>
+
     >> Hello["World"]
      = Hello, World!
     """
