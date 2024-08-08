@@ -10,7 +10,7 @@ class Hello(Builtin):
       <dd>An example function in a Python-importable Mathics module.
     </dl>
 
-    >> Hello["World"]
+    >> PyMathics`Hello["World"]
      = Hello, World!
     """
 
