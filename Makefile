@@ -38,7 +38,7 @@ install:
 	$(PYTHON) setup.py install
 
 # Run tests
-check: pytest doctest
+check: pytest
 
 #: Remove derived files
 clean: clean-pyc
@@ -51,14 +51,6 @@ clean-pyc:
 pytest:
 	py.test test $o
 
-
-# #: Create data that is used to in Django docs and to build TeX PDF
-# doc-data mathics/doc/tex/data: mathics/builtin/*.py mathics/doc/documentation/*.mdoc mathics/doc/documentation/images/*
-# 	$(PYTHON) mathics/test.py -ot -k
-
-#: Run tests that appear in docstring in the code.
-doctest:
-	$(PYTHON) mathics/test.py $o
 
 # #: Make Mathics PDF manual
 # doc mathics.pdf: mathics/doc/tex/data
