@@ -1,0 +1,16 @@
+--- ChangeLog	2024-08-19 13:00:26.144430865 -0400
++++ ChangeLog-spell-corrected	2024-08-19 12:59:33.866689400 -0400
+@@ -10,7 +10,7 @@
+ 2024-08-19  Juan Mauricio Matera <matera@fisica.unlp.edu.ar>
+
+ 	* pymathics/hello/__main__.py: adding blanklines between </dl> and
+-	the examples in docstrings (#4) * addiing blanklines between </dl> and the examples in docstrings * Update __main__.py --------- Co-authored-by: R. Bernstein <rocky@users.noreply.github.com>
++	the examples in docstrings (#4) * adding blanklines between </dl> and the examples in docstrings * Update __main__.py --------- Co-authored-by: R. Bernstein <rocky@users.noreply.github.com>
+
+ 2024-08-19  rocky <rb@dustyfeet.com>
+
+@@ -95,4 +95,3 @@
+ 2020-10-30  rocky <rocky@gnu.org>
+
+ 	* A simple PyMathics module A "Hello, World!" PyMathics Function and Symbol definition.  Adapted from mmatera's PyMathics "testpymathicsmodule"
+-
