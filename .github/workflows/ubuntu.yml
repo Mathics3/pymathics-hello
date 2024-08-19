@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         # Can remove after next Mathics-core release
-        python -m pip install -e git+https://github.com/Mathics3/mathics-core#egg=Mathics3[full]
+        # python -m pip install -e git+https://github.com/Mathics3/mathics-core#egg=Mathics3[full]
     - name: Install pymathics.hello
       run: |
         pip install -e .
