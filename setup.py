@@ -3,15 +3,27 @@
 
 import sys
 import platform
+import os.path as osp
 from setuptools import setup, find_namespace_packages
 
 # Ensure user has the correct Python version
-if sys.version_info < (3, 6):
-    print("Mathics support Python 3.6 and above; you have %d.%d" % sys.version_info[:2])
+if sys.version_info < (3, 8):
+    print("Mathics support Python 3.8 and above; you have %d.%d" % sys.version_info[:2])
     sys.exit(-1)
+
+
+def get_srcdir():
+    filename = osp.normcase(osp.dirname(osp.abspath(__file__)))
+    return osp.realpath(filename)
+
+
+def read(*rnames):
+    return open(osp.join(get_srcdir(), *rnames)).read()
+
 
 # stores __version__ in the current namespace
 exec(compile(open("pymathics/hello/version.py").read(), "version.py", "exec"))
+long_description = read("README.rst") + "\n"
 
 is_PyPy = platform.python_implementation() == "PyPy"
 
@@ -19,6 +31,8 @@ setup(
     name="pymathics-hello",
     maintainer="Mathics Group",
     maintainer_email="mathics-devel@googlegroups.com",
+    long_description=long_description,
+    long_description_content_type="text/x-rst",
     version=__version__,  # noqa
     packages=find_namespace_packages(include=["pymathics.*"]),
     install_requires=["Mathics3>=7.0.0.dev0"],
