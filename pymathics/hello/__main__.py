@@ -7,9 +7,12 @@ from mathics.core.evaluation import Evaluation
 class Hello(Builtin):
     """
     <dl>
+      <dt>'Hello'[]
       <dt>'Hello'[$person$]
       <dd>An example function in a Python-importable Mathics3 module.
     </dl>
+
+    >> PyMathics`Hello["World"]
 
     See also the <url>
     :developer guide section:
