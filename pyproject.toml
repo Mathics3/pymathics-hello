@@ -1,3 +1,14 @@
+[build-system]
+requires = [
+ "setuptools>=70.0.0", # CVE-2024-38335 recommends this
+        "mpmath>=1.2.0",
+        "numpy<1.27",
+        "matplotlib",
+        "scipy>=1.10.0",
+	"sympy>=1.11,<1.13",
+]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "Mathics3-hello"
 description = 'Mathics3 Hello, World! module'

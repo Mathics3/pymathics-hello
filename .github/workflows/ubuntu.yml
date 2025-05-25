@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.12]
+        python-version: ['3.9', '3.10', '3.11', '3.12', '3.13']
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
@@ -28,10 +28,9 @@ jobs:
         (cd mathics-core && pip3 install -e .[full])
         (cd mathics-core && bash ./admin-tools/make-JSON-tables.sh)
         python -m pip install -e git+https://github.com/Mathics3/Mathics3-Module-Base#egg=Mathics3-Module-Base
-        python -m pip install -e .
-    - name: install Mathics3 module Hello
+    - name: install Mathic3 Hello Module
       run: |
-        pip install -e .
-    - name: Test Mathics
+        python -m pip install -e .
+    - name: Test Mathics3 Hello Module
       run: |
         make check
