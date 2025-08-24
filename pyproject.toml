@@ -1,6 +1,6 @@
 [build-system]
 requires = [
- "setuptools>=70.0.0", # CVE-2024-38335 recommends this
+	"setuptools",
         "mpmath>=1.2.0",
         "numpy<1.27",
         "matplotlib",
@@ -15,7 +15,7 @@ description = 'Mathics3 Hello, World! module'
 dependencies = [
         "Mathics3-Module-Base",
 ]
-requires-python = ">=3.9" # Sympy 1.11 is supported only down to 3.8
+requires-python = ">=3.10"
 readme = "README.rst"
 license = {text = "GPL"}
 keywords = ["Mathematica", "Wolfram", "Interpreter", "Shell", "Math", "CAS"]
@@ -27,7 +27,6 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
