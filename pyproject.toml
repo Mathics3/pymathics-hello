@@ -1,0 +1,57 @@
+[build-system]
+requires = [
+	"setuptools",
+        "mpmath>=1.2.0",
+        "numpy<1.27",
+        "matplotlib",
+        "scipy>=1.10.0",
+	"sympy>=1.11,<1.13",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Mathics3-hello"
+description = 'Mathics3 Hello, World! module'
+dependencies = [
+        "Mathics3-Module-Base",
+]
+requires-python = ">=3.10"
+readme = "README.rst"
+license = {text = "GPL"}
+keywords = ["Mathematica", "Wolfram", "Interpreter", "Shell", "Math", "CAS"]
+maintainers = [
+    {name = "Mathics Group", email = "mathics-devel@googlegroups.com"},
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Interpreters",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/Mathics3/pymathics-hello"
+Downloads = "https://github.com/Mathics3/pymathics-hello/releases"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools]
+packages = [
+    "pymathics.hello",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "pymathics.hello.__version__"}

@@ -6,9 +6,9 @@ repos:
     hooks:
     - id: check-merge-conflict
     - id: debug-statements
-      stages: [commit]
+      stages: [pre-commit]
     - id: end-of-file-fixer
-      stages: [commit]
+      stages: [pre-commit]
 # -   repo: https://github.com/pycqa/isort
 #     rev: 5.10.1
 #     hooks:
@@ -20,9 +20,9 @@ repos:
     - id: black
       language_version: python3
       exclude: 'pymathics/hello/version.py'
-      stages: [commit]
+      stages: [pre-commit]
 -   repo: https://github.com/pycqa/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
-        stages: [commit]
+        stages: [pre-commit]

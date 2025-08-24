@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: '**'
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [macOS]
-        python-version: [3.8, 3.9, 3.10, 3.11]
+        python-version: ['3.11', '3.12', '3.13']
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
@@ -23,12 +23,16 @@ jobs:
       run: |
         brew install llvm
         python -m pip install --upgrade pip
-        pip install pytest
-        # Can remove after next Mathics-core release
-        # python -m pip install -e git+https://github.com/Mathics3/mathics-core#egg=Mathics3[full]
-    - name: Install pymathics.hello
+        python -m pip install pytest
+        # Go over and comment out stuff when next Mathics core and Mathics-scanner are released
+        python -m pip install -e git+https://github.com/Mathics3/mathics-scanner#egg=Mathics-Scanner[full]
+        git clone https://github.com/Mathics3/mathics-core
+        (cd mathics-core && pip3 install -e .[full])
+        (cd mathics-core && bash ./admin-tools/make-JSON-tables.sh)
+        python -m pip install -e git+https://github.com/Mathics3/Mathics3-Module-Base#egg=Mathics3-Module-Base
+    - name: Install Mathic3 Hello Module
       run: |
-        pip install -e .
-    - name: Test Mathics
+        python -m pip install -e .
+    - name: Test Mathics3 Hello Module
       run: |
         make check
