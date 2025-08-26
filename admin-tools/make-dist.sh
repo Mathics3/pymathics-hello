@@ -1,5 +1,5 @@
 #!/bin/bash
-PACKAGE=pymathics-hello
+PACKAGE=Mathics3-Module-hello
 
 # FIXME put some of the below in a common routine
 function finish {

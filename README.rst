@@ -1,5 +1,3 @@
-Test Mathics3 Module
-
 This is a Mathics3 Python Module showing the classic "Hello, World!"
 The purpose is to demonstrate how to write a Mathics3 Python Module which extends Mathics3 by adding a function, but written in Python.
 

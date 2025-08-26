@@ -40,8 +40,8 @@ classifiers = [
 dynamic = ["version"]
 
 [project.urls]
-Homepage = "https://github.com/Mathics3/pymathics-hello"
-Downloads = "https://github.com/Mathics3/pymathics-hello/releases"
+Homepage = "https://github.com/Mathics3/Mathics3-Module-hello"
+Downloads = "https://github.com/Mathics3/Mathics3_module-hello/releases"
 
 [project.optional-dependencies]
 dev = [

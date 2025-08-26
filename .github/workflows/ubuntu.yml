@@ -1,4 +1,4 @@
-name: pymathics-hello (ubuntu)
+name: Mathics3-Module-hello (ubuntu)
 
 on:
   push:
