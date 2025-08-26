@@ -1,11 +1,9 @@
-Test PyMathics module
+Test Mathics3 Module
 
-This is a Python module for Mathics that is an simple "Hello, World" example
-that is typically used as a minimal example for demonstration.
+This is a Mathics3 Python Module showing the classic "Hello, World!"
+The purpose is to demonstrating how to write a Mathics3 Python Module which extends Mathics3 by adding a function but written in Python.
 
-You can also use this as a template to clone if you want to create your own Pymathics module.
-
-Here we are demonstrating how to write a PyMathics module.
+You can also use this as a template to clone if you want to create your own Mathics3 Module.
 
 To install in development mode (run code from the source tree):
 
