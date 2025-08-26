@@ -12,7 +12,7 @@ To install in development mode (run code from the source tree):
    $ make develop
 
 
-After installing inside Mathics you can load this using the
+After installing inside Mathics3, you can load this using the
 ``LoadModule[]`` function.
 
 Then the function ```Hello[]`` is available::
