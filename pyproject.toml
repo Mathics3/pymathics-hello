@@ -1,11 +1,7 @@
 [build-system]
 requires = [
 	"setuptools",
-        "mpmath>=1.2.0",
-        "numpy<1.27",
-        "matplotlib",
-        "scipy>=1.10.0",
-	"sympy>=1.11,<1.13",
+        "Mathics3>=9.0.0",
 ]
 build-backend = "setuptools.build_meta"
 
@@ -13,11 +9,12 @@ build-backend = "setuptools.build_meta"
 name = "Mathics3-hello"
 description = 'Mathics3 Hello, World! module'
 dependencies = [
-        "Mathics3-Module-Base",
+        "Mathics3-Module-Base >= 9.0.0",
+        "Mathics3 >= 9.0.0",
 ]
 requires-python = ">=3.10"
 readme = "README.rst"
-license = {text = "GPL"}
+license = "GPL-3.0-or-later"
 keywords = ["Mathematica", "Wolfram", "Interpreter", "Shell", "Math", "CAS"]
 maintainers = [
     {name = "Mathics Group", email = "mathics-devel@googlegroups.com"},
@@ -25,7 +22,6 @@ maintainers = [
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
