@@ -2,9 +2,8 @@
 /.python-version
 /ChangeLog
 /ChangeLog-spell-corrected
-/Mathics3_hello.egg-info
+/ChangeLog.orig
+/Mathics3_Module_hello.egg-info
 /build
 /dist
-/pymathics_hello.egg-info
-/pymathics_test.egg-info
 __pycache__

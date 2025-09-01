@@ -25,6 +25,10 @@ all: develop
 build:
 	$(PYTHON) ./setup.py build
 
+#: Make PyPI distribution
+dist:
+	./admin-tools/make-dist.sh
+
 #: Check Python version, and install PyPI dependencies
 pypi-setup:
 	$(PIP) install -e .
