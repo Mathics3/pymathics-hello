@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Mathics3-hello"
+name = "Mathics3-Module-hello"
 description = 'Mathics3 Hello, World! module'
 dependencies = [
         "Mathics3-Module-Base >= 9.0.0",

@@ -1,3 +1,9 @@
+9.0.1
+-----
+
+Change module name to Mathics3-Module-hello. Revise documentation.
+
+
 9.0.0
 -----
 

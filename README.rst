@@ -19,12 +19,15 @@ Then the function ```Hello[]`` is available::
       In[1]:= LoadModule["pymathics.hello"]
       Out[1]= pymathics.hello
 
-      In[2]:= Hello["World"]
+      In[2]:= Hello[]
       Out[2]:= Hello, World!
 
-You can test with ``py.test``::
+      In[2]:= Hello["everyone"]
+      Out[2]:= Hello, everyone!
 
-     $ py.test test
+You can test with ``pytest``::
+
+     $ pytest test
 
 or simply::
 
