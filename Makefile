@@ -37,10 +37,6 @@ pypi-setup:
 develop: pypi-setup
 	$(PIP) install -e .
 
-#: Install mathics
-install:
-	$(PYTHON) setup.py install
-
 # Run tests
 check: pytest
 
