@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Mathics3 Module hello module.
+PyMathics Hello test module.
 
-This is an example of an external Mathics3 module.
+This is an example of an external PyMathics module.
 
-A Mathics3 module is a Python module which can be loaded into Mathics using the
+A PyMathics module is a Python module which can be loaded into Mathics using the
 ``LoadModule[]`` method.
 
 In particular, to load this after installing this module as a Python module run inside

@@ -25,10 +25,6 @@ all: develop
 build:
 	$(PYTHON) ./setup.py build
 
-#: Make PyPI distribution
-dist:
-	./admin-tools/make-dist.sh
-
 #: Check Python version, and install PyPI dependencies
 pypi-setup:
 	$(PIP) install -e .
@@ -36,6 +32,10 @@ pypi-setup:
 #: Set up to run from the source tree
 develop: pypi-setup
 	$(PIP) install -e .
+
+#: Install mathics
+install:
+	$(PYTHON) setup.py install
 
 # Run tests
 check: pytest
@@ -49,7 +49,7 @@ clean-pyc:
 
 #: Run py.test tests. Use environment variable "o" for pytest options
 pytest:
-	pytest test $o
+	py.test test $o
 
 
 # #: Make Mathics PDF manual

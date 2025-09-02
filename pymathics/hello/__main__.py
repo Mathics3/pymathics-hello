@@ -12,8 +12,7 @@ class Hello(Builtin):
       <dd>An example function in a Python-importable Mathics3 module.
     </dl>
 
-    >> Hello["everyone"]
-    = "Hello, everyone!"
+    >> PyMathics`Hello["World"]
 
     See also the <url>
     :developer guide section:
@@ -27,10 +26,6 @@ class Hello(Builtin):
      = Hello, rocky!
     """
 
-    # Set checking that the number of arguments required is zero or one.
-    # eval_error = Builtin.generic_argument_error
-    # expected_args = (0, 1)
-
     summary_text = """classic "hello" demo"""
 
     # The function below should start with "apply"
@@ -39,15 +34,9 @@ class Hello(Builtin):
         return String("Hello, World!")
 
     # The function below should start with "eval"
-    def eval_with_name(self, person, evaluation: Evaluation) -> String:
-        "Hello[person_]"
-        # The above pattern matches Hello with a argument.
+    def eval_with_name(self, person: String, evaluation: Evaluation) -> String:
+        "Hello[person_String]"
+        # The above pattern matches Hello with a single string argument.
         # See https://reference.wolfram.com/language/tutorial/Patterns.html#7301
         # and https://reference.wolfram.com/language/ref/Cases.html
-
-        # Check that "person" is a String.
-        if not isinstance(person, String):
-            evaluation.message("Hello", "string")
-            return
-
         return String(f"Hello, {person.value}!")
