@@ -12,18 +12,16 @@ class Hello(Builtin):
       <dd>An example function in a Python-importable Mathics3 module.
     </dl>
 
-    >> PyMathics`Hello["World"]
+    >> Hello[]
+     = "Hello, World!"
+
+    >> Hello["Everyone"]
+     = Hello, "Everyone!"
 
     See also the <url>
     :developer guide section:
     https://mathics-development-guide.readthedocs.io/en/latest/extending/developing-code/extending/tutorial/1-builtin.html</url> for an \
     explanation of everything.
-
-    >> Hello[]
-     = Hello, World!
-
-    >> Hello["rocky"]
-     = Hello, rocky!
     """
 
     summary_text = """classic "hello" demo"""

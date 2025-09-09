@@ -16,7 +16,7 @@ LANG = en
    pypi-setup \
    pytest \
    rmChangeLog \
-   test
+   doctest pytest test
 
 #: Default target - same as "develop"
 all: develop
@@ -38,7 +38,7 @@ install:
 	$(PYTHON) setup.py install
 
 # Run tests
-check: pytest
+check: pytest doctest
 
 #: Remove derived files
 clean: clean-pyc
@@ -47,9 +47,13 @@ clean: clean-pyc
 clean-pyc:
 	@find . -name "*.pyc" -type f -delete
 
+#:
+doctest:
+	MATHICS_CHARACTER_ENCODING="ASCII" $(PYTHON) -m mathics.docpipeline -l pymathics.hello -c 'Example Mathics3 Module' $o
 #: Run py.test tests. Use environment variable "o" for pytest options
 pytest:
 	py.test test $o
+
 
 
 # #: Make Mathics PDF manual
