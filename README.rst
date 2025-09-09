@@ -24,7 +24,7 @@ Then the function ```Hello[]`` is available::
 
 You can test with ``py.test``::
 
-     $ py.test test
+     $ pytest test
 
 or simply::
 
